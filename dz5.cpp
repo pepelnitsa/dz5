@@ -411,8 +411,6 @@ public:
         this->volume_button = volume_button;
     }
 
-};
-
 public:
     void Call(Human& who) {
         cout << "Calling someone\n";
