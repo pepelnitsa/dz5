@@ -4,6 +4,22 @@
 
 using namespace std;
 
+Phone::Phone() {
+    SetScreenDiagonal(0); 
+    SetWeight(0); 
+    SetColor(""); 
+    SetPowerButton(0); 
+    SetVolumeButton(0); 
+}
+
+Phone::Phone(int screen_diagonal, int weight, const string& color, int power_button, int volume_button) {
+    SetScreenDiagonal(screen_diagonal);
+    SetWeight(weight);
+    SetColor(color);
+    SetPowerButton(power_button);
+    SetVolumeButton(volume_button);
+}
+
 int Phone::GetScreenDiagonal() const {
     return screen_diagonal;
 }

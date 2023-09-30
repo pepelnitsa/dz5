@@ -3,7 +3,21 @@
 #include <iostream>
 
 using namespace std;
+Table::Table() {
+    SetHeight(1.50);
+    SetLength(3.50);
+    SetColor("yellow");
+    SetWeight(70);
+    SetPCOnTable(1);
+}
 
+Table::Table(double height, double length, const string& color, double weight, int pc_on_table) {
+    SetHeight(height);
+    SetLength(length);
+    SetColor(color);
+    SetWeight(weight);
+    SetPCOnTable(pc_on_table);
+}
 double Table::GetHeight() const {
     return height;
 }

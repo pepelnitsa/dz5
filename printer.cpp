@@ -4,6 +4,24 @@
 
 using namespace std;
 
+Printer::Printer() {
+    SetForm("square");
+    SetColor("gray");
+    SetStickersCount(14);
+    SetCablesCount(2);
+    SetPapersInPrinter(0);
+    SetIsJammed(false);
+}
+
+Printer::Printer(const string& form, const string& color, int stickers_count, int cables_count, int papers_in_printer) {
+    SetForm(form);
+    SetColor(color);
+    SetStickersCount(stickers_count);
+    SetCablesCount(cables_count);
+    SetPapersInPrinter(papers_in_printer);
+    SetIsJammed(false);
+}
+
 string Printer::GetForm() const {
     return form;
 }

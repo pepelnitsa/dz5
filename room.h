@@ -5,14 +5,20 @@ using namespace std;
 
 class Room {
 private:
-    double square = 32; // m^2
-    int bed = 2;
-    string wall_color = "black";
-    int windows = 3;
-    int table = 1;
-    bool is_dark = false;
+    double square;
+    int bed;
+    string wall_color;
+    int windows;
+    int table;
+    bool is_dark;
 
 public:
+    Room(double sq, int b, const string& wc, int w, int t);
+    Room();
+    Room(double sq);
+    Room(double sq, int b);
+    Room(double sq, int b, const string& wc);
+
     double GetSquare() const;
     int GetBed() const;
     string GetWallColor() const;

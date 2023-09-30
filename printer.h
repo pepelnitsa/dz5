@@ -13,6 +13,9 @@ private:
     bool is_jammed = false;
 
 public:
+    Printer();
+    Printer(const string& form, const string& color, int stickers_count, int cables_count, int papers_in_printer);
+
     string GetForm() const;
     string GetColor() const;
     int GetStickersCount() const;

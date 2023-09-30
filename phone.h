@@ -5,13 +5,16 @@ using namespace std;
 
 class Phone {
 private:
-    int screen_diagonal = 12;
-    int weight = 0.5;
-    string color = "grey";
-    int power_button = 1;
-    int volume_button = 2;
+    int screen_diagonal;
+    int weight;
+    string color;
+    int power_button;
+    int volume_button;
 
 public:
+    Phone();
+    Phone(int screen_diagonal, int weight, const string& color, int power_button, int volume_button);
+
     int GetScreenDiagonal() const;
     int GetWeight() const;
     string GetColor() const;

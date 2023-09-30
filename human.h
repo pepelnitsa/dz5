@@ -2,19 +2,20 @@
 
 using namespace std;
 
-class Cat;
-
 class Human {
 private:
-    double height = 1.72;
-    int arms_count = 2;
-    int legs_count = 2;
-    string hair_color = "pink";
-    string eyes_colour = "blue";
-    bool is_alive = true;
-    bool is_tired = false;
+    double height;
+    int arms_count;
+    int legs_count;
+    string hair_color;
+    string eyes_colour;
+    bool is_alive;
+    bool is_tired;
 
 public:
+    Human();
+    Human(double height, int arms_count, int legs_count, string hair_color, string eyes_colour);
+
     double GetHeight() const;
     int GetArmsCount() const;
     int GetLegsCount() const;

@@ -4,12 +4,55 @@
 
 using namespace std;
 
+Room::Room() {
+    SetSquare(32.0);
+    SetBed(2);
+    SetWallColor("black");
+    SetWindows(3);
+    SetTable(1);
+    SetIsDark(false);
+}
+
+Room::Room(double sq, int bd, string wc, int wnd, int tbl, bool dark) {
+    SetSquare(sq);
+    SetBed(bd);
+    SetWallColor(wc);
+    SetWindows(wnd);
+    SetTable(tbl);
+    SetIsDark(dark);
+}
+
+Room::Room(double sq, int b, const string& wc, int w, int t) : square(0.0), bed(0), wall_color("white"), windows(0), table(0) {
+    SetSquare(sq);
+    SetBed(b);
+    SetWallColor(wc);
+    SetWindows(w);
+    SetTable(t);
+}
+
+Room::Room()
+    : Room(0.0, 0, "white", 0, 0) {}
+
+Room::Room(double sq)
+    : Room(sq, 0, "white", 0, 0) {}
+
+Room::Room(double sq, int b)
+    : Room(sq, b, "white", 0, 0) {}
+
+Room::Room(double sq, int b, const string& wc)
+    : Room(sq, b, wc, 0, 0) {}
+
+
 double Room::GetSquare() const {
     return square;
 }
 
 int Room::GetBed() const {
     return bed;
+}
+
+Room::Room(double square, int bed, const std::string& wall_color, int windows, int table, bool is_dark)
+{
 }
 
 string Room::GetWallColor() const {

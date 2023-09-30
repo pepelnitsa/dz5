@@ -4,6 +4,26 @@
 
 using namespace std;
 
+Human::Human() {
+    SetHeight(1.72);
+    SetArmsCount(2);
+    SetLegsCount(2);
+    SetHairColor("pink");
+    SetEyesColour("blue");
+    SetAlive(true);
+    SetTired(false);
+}
+
+Human::Human(double height, int arms_count, int legs_count, string hair_color, string eyes_colour) {
+    SetHeight(height);
+    SetArmsCount(arms_count);
+    SetLegsCount(legs_count);
+    SetHairColor(hair_color);
+    SetEyesColour(eyes_colour);
+    SetAlive(true);
+    SetTired(false);
+}
+
 double Human::GetHeight() const {
     return height;
 }

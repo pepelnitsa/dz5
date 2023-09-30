@@ -2,14 +2,25 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 Cat::Cat() {
-    tail_length = 0.5;
-    ears_count = 2;
-    fur_color = "white";
-    nick = "Snowflake";
-    eyes_color = "blue";
-    is_alive = true;
-    is_hungry = true;
+    SetTailLength(0.5);
+    SetEarsCount(2);
+    SetFurColor("");
+    SetNick("");
+    SetEyesColor("");
+    SetAlive(true);
+    SetHungry(true);
+}
+
+Cat::Cat(double tail_length, int ears_count, const string& fur_color, const string& nick, const string& eyes_color, bool is_hungry, bool is_alive) {
+    SetTailLength(tail_length);
+    SetEarsCount(ears_count);
+    SetFurColor(fur_color);
+    SetNick(nick);
+    SetEyesColor(eyes_color);
+    SetAlive(is_alive);
+    SetHungry(is_hungry);
 }
 
 double Cat::GetTailLength() const {
@@ -108,4 +119,10 @@ void Cat::Jump() {
     else {
         cout << "The cat is not alive.\n";
     }
+}
+
+
+bool Cat::operator==(const Cat& other) const
+{
+    return false;
 }

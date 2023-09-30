@@ -5,13 +5,17 @@ using namespace std;
 
 class Table {
 private:
-    double height = 1.50; // m
-    double length = 3.50; // m
-    string color = "yellow";
-    double weight = 70; // kg
-    int pc_on_table = 1;
+    double height;
+    double length;
+    string color;
+    double weight;
+    int pc_on_table;
 
 public:
+    Table();
+
+    Table(double height, double length, const string& color, double weight, int pc_on_table);
+
     double GetHeight() const;
     double GetLength() const;
     string GetColor() const;

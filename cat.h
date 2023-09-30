@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
+
 class Cat {
 private:
     double tail_length;
@@ -8,10 +10,13 @@ private:
     string fur_color;
     string nick;
     string eyes_color;
-    bool is_alive;
     bool is_hungry;
+    bool is_alive;
 
 public:
+    Cat();
+    Cat(double tail_length, int ears_count, const string& fur_color, const string& nick, const string& eyes_color, bool is_hungry, bool is_alive);
+
     double GetTailLength() const;
     int GetEarsCount() const;
     string GetFurColor() const;
@@ -30,6 +35,5 @@ public:
     void Walk();
     void Eat(const string& meal);
     void Jump();
+    bool operator==(const Cat& other) const;
 };
-
-
